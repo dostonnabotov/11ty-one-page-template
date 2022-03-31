@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body-300);
+}
+
+/* H1 - H6 font-size */
+h1,
+.h1 {
+  font-size: var(--fs-body-900);
+}
+
+h2,
+.h2 {
+  font-size: var(--fs-body-700);
+}
+
+h3,
+.h3 {
+  font-size: var(--fs-body-600);
+}
+h4,
+.h4 {
+  font-size: var(--fs-body-400);
+}
+
+h5,
+.h5 {
+  font-size: var(--fs-body-200);
+}
+
+h6,
+.h6 {
+  font-size: var(--fs-body-100);
+}
+
+p:not([class]),
+li:not([class]),
+a:not([class]) {
+  max-width: 70ch;
+}
+
+p + p {
+  margin-top: var(--spacer-1);
+}
+
+.uppercase {
+  @include uppercase;
+  font-size: var(--fs-body-400);
+}

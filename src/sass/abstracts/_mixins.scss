@@ -1,0 +1,74 @@
+@use "breakpoints" as *;
+@use "colors" as *;
+@use "type" as *;
+
+// style for uppercase font
+@mixin uppercase {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+// Helper to clear inner floats
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// button decorations
+@mixin btn-primary {
+  border: 1px solid transparent !important;
+  background-color: var(--clr-primary) !important;
+  color: #fff !important;
+}
+
+@mixin btn-outline {
+  background-color: #fff !important;
+  border: 1px solid var(--clr-primary) !important;
+  color: var(--clr-primary) !important;
+}
+
+// breakpoints and media queries
+@mixin md($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin colorVariables {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
+
+@mixin fontVariables {
+  @each $font, $shades in $fonts {
+    @each $shade, $value in $shades {
+      --fs-#{$font}-#{$shade}: #{$value};
+    }
+  }
+}

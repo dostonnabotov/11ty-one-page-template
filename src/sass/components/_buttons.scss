@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.btn {
+  display: inline-block;
+  font-size: var(--fs-body-300);
+  text-decoration: none;
+  line-height: 1;
+  border: 1px solid var(--clr-neutral-900);
+  border-radius: var(--br);
+  padding: 10px 18px;
+  color: inherit;
+  @include uppercase;
+
+  &-primary {
+    @include btn-primary;
+
+    &:hover {
+      @include btn-outline;
+    }
+  }
+
+  &-outline {
+    @include btn-outline;
+
+    &:hover {
+      @include btn-primary;
+    }
+  }
+}

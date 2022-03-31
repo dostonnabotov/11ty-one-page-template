@@ -1,0 +1,52 @@
+@use "../abstracts" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--clr-neutral-100);
+  box-shadow: 0 0 8px -5px var(--clr-neutral-700);
+}
+
+.primary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-block: 1.5rem;
+  gap: 1.5rem;
+}
+
+.nav {
+  display: flex;
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: var(--spacer);
+
+    &-item {
+      list-style-type: none;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    color: inherit;
+    @include uppercase;
+
+    &.active,
+    &:hover {
+      color: var(--clr-primary);
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    position: unset;
+  }
+  .primary-header {
+    flex-direction: column;
+  }
+}
