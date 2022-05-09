@@ -5,30 +5,13 @@ backend:
 media_folder: "public/assets/blog"
 public_folder: "/assets/blog"
 
-
 collections:
   - name: "blog"
     label: "Blog"
     # it specifies where new blogs should go
     folder: "src/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{number}}-{{slug}}"
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Image Caption", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-
-
-
-
-      # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      # - {label: "Title", name: "title", widget: "string"}
-      # - {label: "Publish Date", name: "date", widget: "datetime"}
-      # - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      # - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      # - {label: "Body", name: "body", widget: "markdown"}
