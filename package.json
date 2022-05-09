@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dostonnabotov/whale-blog.git"
+    "url": "git+https://github.com/dostonnabotov/student-guide.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dostonnabotov/whale-blog/issues"
+    "url": "https://github.com/dostonnabotov/student-guide/issues"
   },
-  "homepage": "https://github.com/dostonnabotov/whale-blog#readme",
+  "homepage": "https://github.com/dostonnabotov/student-guide#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0"
   }
