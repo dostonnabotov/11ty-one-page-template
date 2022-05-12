@@ -50,12 +50,6 @@ p {
   margin: 0;
 }
 
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-}
-
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
@@ -88,6 +82,11 @@ h3 {
 /* Utilities */
 .container {
   width: min(100% - 2rem, 65rem);
+  margin-inline: auto;
+}
+
+.container--narrow {
+  width: min(100% - 2rem, 55rem);
   margin-inline: auto;
 }
 
@@ -190,6 +189,32 @@ blockquote {
 /* main */
 main {
   padding-block: 2rem;
+}
+
+/* article */
+.article__header {
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 50em) {
+  .article__header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.article__edit {
+  outline: 1px solid var(--neutral-400);
+  color: inherit;
+  padding: 0.3em 0.7em;
+  border-radius: 50%;
+}
+
+.article__edit:hover,
+.article__edit:focus {
+  outline: 1px solid var(--clr-primary);
+  color: var(--clr-primary);
 }
 
 /* footer */

@@ -2,7 +2,12 @@
 layout: 'base.njk'
 ---
 
-<article class="container flow">
-  <h2>{{ title }}</h2>
+<article class="container--narrow flow">
+  <div class="article__header flex">
+    <h2>{{ title }}</h2>
+    <a href="{{ gitURL }}" target="_blank" class="article__edit" title="Edit in GitHub">
+      <i class="fas fa-pencil"></i>
+    </a>
+  </div>
   {{ content | safe }}
 </article>
