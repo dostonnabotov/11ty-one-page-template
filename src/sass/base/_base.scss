@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+
+  background-color: var(--neutral-100);
+  color: var(--neutral-400);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.1;
+}

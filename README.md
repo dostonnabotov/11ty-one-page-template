@@ -1,9 +1,16 @@
 # Student Guide
 
-### version 1.1.0
+## Changelog
 
-Eleventy
+- version 1.1.1
 
-### version 1.0.0
+  - Sidebar and Sass added
+  - Bug fixes and minor improvements
 
-HTML and CSS
+- version 1.1.0
+
+  - Built with Eleventy, Nunjucks and CMS
+
+- version 1.0.0
+
+  - Built with HTML and CSS

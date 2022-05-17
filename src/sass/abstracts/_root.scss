@@ -1,0 +1,29 @@
+@use "mixins" as *;
+
+:root {
+  --clr-primary: #0066ff;
+
+  --neutral-100: #fff;
+  --neutral-400: #444;
+  --neutral-500: #3d3d3d;
+  --neutral-700: #363535;
+  --neutral-900: #252525;
+
+  --fw-400: 400;
+  --fw-700: 600;
+  --fw-900: 700;
+
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-700: 1.5rem;
+  --fs-900: 3rem;
+
+  --spacer: 5rem;
+
+  @include md("medium") {
+    --fs-400: 1.125rem;
+    --fs-500: 1.5rem;
+    --fs-700: 2rem;
+    --fs-900: 4rem;
+  }
+}
