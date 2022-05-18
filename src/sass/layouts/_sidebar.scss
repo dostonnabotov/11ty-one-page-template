@@ -11,12 +11,13 @@
     flex-direction: column;
     list-style: none;
     border-top: 2px solid #555;
+    padding: 1rem;
   }
 
   & a {
     display: inline-block;
-    padding: 16px;
     text-decoration: none;
+    font-size: 16px;
 
     &:hover,
     &:focus {
@@ -24,17 +25,14 @@
     }
   }
 
-  @include md("small") {
-    flex-direction: row;
-    padding: 0 0.4rem;
-  }
-
   @include md("medium") {
-    --flow-spacer: 0.5rem;
-    position: sticky;
-    top: 1rem;
-    flex-direction: column;
-    border: 0;
-    border-left: 2px solid #555;
+    &__list {
+      --flow-spacer: 0.5rem;
+      position: sticky;
+      top: 1rem;
+      flex-direction: column;
+      border: 0;
+      border-left: 2px solid #555;
+    }
   }
 }
