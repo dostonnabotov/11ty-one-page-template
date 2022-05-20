@@ -1,6 +1,6 @@
 {
   "name": "student-guide",
-  "version": "1.1",
+  "version": "1.1.2",
   "description": "Student Guide",
   "main": "index.html",
   "scripts": {
