@@ -1,56 +1,96 @@
 @use "../abstracts" as *;
 
-main {
+.header,
+.footer {
   padding-block: 2rem;
-}
-
-.title {
-  font-size: var(--fs-900);
   text-align: center;
-  letter-spacing: 2px;
-  text-transform: capitalize;
+  background-color: var(--clr-primary);
+  color: var(--neutral-100);
 }
 
-/* article */
-.article--container {
-  display: grid;
-  gap: 3rem;
-  grid-template-areas: "content" "sidebar";
+.footer__nav {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.main {
   padding-block: 2rem;
-  position: relative;
+  --gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "sidebar" "articles";
 
   @include md("medium") {
-    grid-template-columns: 5fr 1fr;
-    grid-template-areas: "content sidebar";
+    --gap: 4rem;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: "sidebar articles";
   }
 }
 
+/* Articles */
+.articles {
+  grid-area: articles;
+}
+
 .article {
-  grid-area: content;
-  padding: 1px 16px;
+  padding-block: 2rem;
 
   &__header {
     align-items: center;
     flex-direction: column;
   }
 
-  &__edit {
-    outline: 1px solid var(--neutral-400);
-    color: inherit;
-    padding: 0.3em 0.7em;
-    border-radius: 50%;
+  @include md("medium") {
+    &__header {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+}
 
-    &:hover,
-    &:focus {
-      outline: 1px solid var(--clr-primary);
-      color: var(--clr-primary);
+.custom-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.custom-icon {
+  display: inline-block;
+  border-radius: 50%;
+  outline: 2px solid var(--clr-accent);
+  padding: 0.2em;
+  width: 2rem;
+  text-align: center;
+  @include custom-link;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid var(--clr-primary);
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+
+  &__list {
+    --flow-spacer: 0.5rem;
+
+    &-item {
+      padding-block: 0.3rem;
+      border-bottom: 1px solid #d4d4d4;
     }
   }
 
+  .sidebar-link {
+    @include custom-link;
+  }
+
   @include md("medium") {
-    &__header {
-      flex-direction: row;
-      justify-content: space-between;
+    &__list {
+      position: sticky;
+      top: 1rem;
+      overflow-y: auto;
+      font-size: 1rem;
+      list-style: none;
     }
   }
 }

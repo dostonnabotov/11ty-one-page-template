@@ -1,0 +1,9 @@
+<nav class="sidebar">
+    <ul role="list" class="sidebar__list flow">
+        {%- for post in collections.post -%}
+            <li class="sidebar__list-item">
+                <a class="sidebar-link" href="{{ post.url }}">{{ post.data.title }}</a>
+            </li>
+        {%- endfor -%}
+    </ul>
+</nav>

@@ -2,6 +2,11 @@
 
 ## Changelog
 
+- version 1.1.2
+
+  - Layout changed
+  - Merged posts in one page
+
 - version 1.1.1
 
   - Sidebar and Sass added

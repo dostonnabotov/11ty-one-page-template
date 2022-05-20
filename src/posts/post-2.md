@@ -1,5 +1,5 @@
 ---
-title: About the author
+title: Introduction
 gitURL: https://github.com/dostonnabotov/student-guide/blob/main/src/blog/1-about-the-author.md
 ---
 

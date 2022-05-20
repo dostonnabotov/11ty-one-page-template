@@ -1,25 +1,18 @@
----
-layout: 'base.njk'
----
-
-<section class="article--container container">
-  <nav class="sidebar">
-    <h3>
-      <a href="/">Student Guide</a>
-    </h3>
-    <ul role="list" class="sidebar__list flow">
-      {%- for post in collections.post -%}
-        {% include 'article-snippet.njk' %}
-      {%- endfor -%}
-    </ul>
-  </nav>
-  <article class="article flow">
-    <div class="article__header flex">
-      <h2>{{ title }}</h2>
-      <a href="{{ gitURL }}" target="_blank" class="article__edit" title="Edit on GitHub">
-        <i class="fas fa-pencil"></i>
-      </a>
-    </div>
-    {{ content | safe }}
-  </article>
-</section>
+<div class="articles">
+  {%- for post in collections.post -%}
+    <article class="article flow">
+      <div class="article__header flex">
+        <h2>{{ post.data.title }}</h2>
+        <div class="custom-icons">
+          <a href="#" class="custom-icon" title="Pin it">
+            <i class="fas fa-thumb-tack"></i>
+          </a>
+          <a href="#" class="custom-icon" title="Edit on GitHub">
+            <i class="fas fa-pencil"></i>
+          </a>
+        </div>
+      </div>
+      {{ post.templateContent | safe }}
+    </article>
+  {%- endfor -%}
+</div>

@@ -3,10 +3,7 @@ title : Student Guide
 layout : 'base.njk'
 ---
 
-<div class="container flow">
-  <ul class="flow">
-    {%- for post in collections.post -%}
-      {% include 'article-snippet.njk' %}
-    {%- endfor -%}
-  </ul>
+<div class="main container grid">
+  {% include 'sidebar.njk' %}
+  {% include 'article.njk' %}
 </div>
