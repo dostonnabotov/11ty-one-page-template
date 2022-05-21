@@ -64,14 +64,16 @@
 .custom-icon {
   display: inline-block;
   border-radius: 50%;
-  outline: 2px solid var(--clr-accent);
+  outline: 4px solid var(--clr-accent);
   padding: 0.3em .7em;
   text-align: center;
+  opacity: .6;
   @include custom-link;
 
   &:hover,
   &:focus {
-    outline: 2px solid var(--clr-primary);
+    opacity: .9
+    outline: 4px solid var(--clr-primary);
   }
 }
 
