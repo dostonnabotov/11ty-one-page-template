@@ -5,11 +5,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/admin");
 
+  // correct formating of dates
   const { DateTime } = require("luxon");
 
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
+
+  // https://github.com/11ty/eleventy/issues/898
+  function sortByOrder(values) {
+    let vals = [...values];
+    return vals.sort((a, b) => Math.sign(a.data.order - b.data.order));
+}
+
+  eleventyConfig.addFilter("sortByOrder", sortByOrder);
 
   return {
     dir: {

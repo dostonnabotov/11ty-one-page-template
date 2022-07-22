@@ -8,71 +8,43 @@
   color: var(--neutral-100);
 }
 
-.footer__nav {
-  width: fit-content;
-  margin-inline: auto;
-}
-
 .main {
   padding-block: 2rem;
   --gap: 2rem;
-  grid-template-columns: 1fr;
-  grid-template-areas: "sidebar" "articles";
 
   @include md("medium") {
     --gap: 4rem;
     grid-template-columns: 2fr 5fr;
-    grid-template-areas: "sidebar articles";
   }
-}
-
-/* Articles */
-.articles {
-  grid-area: articles;
 }
 
 .article {
   padding-block: 2rem;
 
-  &__header {
-    align-items: center;
-    flex-direction: column;
+  & h2 {
+    position: relative;
   }
 
-  @include md("medium") {
-    &__header {
-      justify-content: space-between;
-      flex-direction: row;
-    }
+  & h2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5rem;
+    height: 1px;
+    background-color: var(--clr-primary);
   }
-}
 
-.custom-icons {
-  display: flex;
-  gap: 1rem;
-}
-
-.custom-icon {
-  display: inline-block;
-  border-radius: 50%;
-  outline: 2px solid var(--clr-accent);
-  padding: 0.2em;
-  width: 2rem;
-  text-align: center;
-  @include custom-link;
-
-  &:hover,
-  &:focus {
-    outline: 2px solid var(--clr-primary);
+  & h3 {
+    margin-left: 1rem;
+    opacity: 0.9;
   }
 }
 
-/* Sidebar */
 .sidebar {
-  grid-area: sidebar;
-
   &__list {
     --flow-spacer: 0.5rem;
+    list-style: inside;
 
     &-item {
       padding-block: 0.3rem;
