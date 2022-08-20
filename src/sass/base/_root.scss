@@ -1,4 +1,4 @@
-@use "mixins" as *;
+@use "../abstracts" as *;
 
 :root {
   --clr-primary: #0066ff;
@@ -14,7 +14,7 @@
   --fs-700: 1.25rem;
   --fs-900: 2rem;
 
-  @include md("medium") {
+  @include mq("md") {
     --fs-400: 1.125rem;
     --fs-700: 1.5rem;
     --fs-900: 3rem;

@@ -1,42 +1,13 @@
-// 'mobile-first' approach
 $breakpoints: (
-  "small": (
-    min-width: 25rem,
-  ),
-  "medium": (
-    min-width: 50rem,
-  ),
-  "large": (
-    min-width: 75rem,
-  ),
+  sm: 30em,
+  md: 50em,
+  lg: 75em,
 );
 
-// Reference: https://sass-guidelin.es/#responsive-web-design-and-breakpoints
-// @include md('small'/'medium'/'large') {
-//    @content;
-// }
-@mixin md($breakpoint) {
-  $raw-query: map-get($breakpoints, $breakpoint);
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
 
-  @if $raw-query {
-    $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query));
-
-    @media #{$query} {
-      @content;
-    }
-  } @else {
-    @error 'No value found for `#{$breakpoint}`. '
-         + 'Please make sure it is defined in `$breakpoints` map.';
-  }
-}
-
-@mixin custom-link {
-  color: inherit;
-  text-decoration: none;
-  transition: color 150ms ease-in-out;
-
-  &:hover,
-  &:focus {
-    color: var(--clr-primary);
+  @media only screen and (min-width: $size) {
+    @content;
   }
 }

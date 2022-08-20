@@ -19,8 +19,7 @@ h3 {
 a {
   color: inherit;
 
-  &:hover,
-  &:focus {
+  &:is(:hover, :focus) {
     text-decoration: none;
   }
 }
@@ -35,4 +34,21 @@ blockquote {
 article:target {
   outline: 1px dashed var(--clr-accent);
   outline-offset: 5px;
+}
+
+p,
+ul,
+li,
+blockquote:not([class]) {
+  max-width: 65ch;
+}
+
+h1,
+h2,
+h3 {
+  max-width: 35ch;
+}
+
+iframe {
+  aspect-ratio: 16 / 9;
 }

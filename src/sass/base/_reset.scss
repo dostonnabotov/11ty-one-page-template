@@ -1,5 +1,11 @@
 @use "../abstracts" as *;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
@@ -26,7 +32,9 @@ ol[role="list"] {
 }
 
 img,
-picture {
+picture,
+iframe,
+video {
   max-width: 100%;
   display: block;
 }
