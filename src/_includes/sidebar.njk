@@ -1,9 +1,0 @@
-<nav class="sidebar">
-  <ul role="list" class="sidebar__list flow">
-    {%- for post in collections.post | sortByOrder -%}
-      <li class="sidebar__list-item">
-        <a class="sidebar-link" href="#{{ post.data.id }}">{{ post.data.title }}</a>
-      </li>
-    {%- endfor -%}
-  </ul>
-</nav>
