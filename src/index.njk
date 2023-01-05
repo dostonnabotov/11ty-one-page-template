@@ -1,19 +1,11 @@
 ---
-title : Student Guide
+title : Homepage
 layout : 'base.njk'
 ---
 
-<div class="main container grid">
-  {% include 'sidebar.njk' %}
-
-  <!-- Main content -->
-  <div class="articles">
-  {%- for post in collections.post | sortByOrder -%}
-    <article class="article flow" id={{ post.data.id }}>
-      <h2>{{ post.data.title }}</h2>
-      {{ post.templateContent | safe }}
-    </article>
-  {%- endfor -%}
-  <!-- /Main content -->
-</div>
-</div>
+{%- for post in collections.posts | sortByOrder -%}
+  <article id={{ post.data.id }}>
+    <h2>{{ post.data.title }}</h2>
+    {{ post.templateContent | safe }}
+  </article>
+{%- endfor -%}

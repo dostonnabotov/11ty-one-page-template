@@ -1,36 +1,3 @@
-//  * TABLE OF CONTENTS
-//  *
-//  * ABSTRACTS
-//  * _breakpoints
-//  * _mixins
-//  * _root
-//  * _index
-//  *
-//  * BASE
-//  * _reset
-//  * _base
-//  * _index
-//  *
-//  * COMPONENTS
-//  * _buttons
-//  * _index
-//  *
-//  * LAYOUTS
-//  * _header
-//  * _main
-//  * _sidebar
-//  * _footer
-//  * _index
-//  *
-//  * UTILITIES
-//  * _utils
-//  * _index
-//  *
-//  * NOTE: I used '_index.scss' file in my each folder in order to
-//  * '@forward' the files, and '@use' it whereever I need
-
-@use "./abstracts" as *;
-@use "./base" as *;
-@use "./utils" as *;
-@use "./components" as *;
-@use "./layouts" as *;
+body {
+  font-family: system-ui, sans-serif;
+}
