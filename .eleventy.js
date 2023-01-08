@@ -1,9 +1,8 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/sass/");
-  eleventyConfig.addPassthroughCopy("./src/css/");
 
+  eleventyConfig.addPassthroughCopy("./src/css/");
   eleventyConfig.addPassthroughCopy("./src/assets");
-  eleventyConfig.addPassthroughCopy("./src/admin");
 
   // correct formating of dates
   const { DateTime } = require("luxon");
