@@ -1,6 +1,6 @@
 ---
 title : Homepage
-layout : 'base.njk'
+layout : 'layouts/base.njk'
 ---
 
 <aside>
@@ -16,7 +16,6 @@ layout : 'base.njk'
     {% endfor %}
   </ul>
 </aside>
-
 {%- for post in collections.posts | sortByOrder -%}
   <article id={{ post.data.id }}>
     <h2 id="{{ post.data.id }}">{{ post.data.title }}</h2>

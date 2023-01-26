@@ -1,0 +1,11 @@
+{
+  "title": "11ty One Page Template",
+  "url": "https://example.com/",
+  "language": "en",
+  "description": "11ty One Page Layout Template",
+  "author": {
+    "name": "Your Name",
+    "email": "youremail@example.com",
+    "url": "https://example.com/about-me/"
+  }
+}
