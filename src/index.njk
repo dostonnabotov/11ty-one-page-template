@@ -19,6 +19,10 @@ layout : 'layouts/base.njk'
 {%- for post in collections.posts | sortByOrder -%}
   <article id={{ post.data.id }}>
     <h2 id="{{ post.data.id }}">{{ post.data.title }}</h2>
+    <p>
+      <time datetime="{{ post.data.date | ISODate }}">{{ post.data.date | readableDate }}</time>
+    </p>
+    
     {{ post.templateContent | safe }}
   </article>
 {%- endfor -%}

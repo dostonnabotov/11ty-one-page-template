@@ -1,6 +1,7 @@
 ---
 title: Post 3
 id: post-3
+date: 2023-01-18
 order: 3
 ---
 

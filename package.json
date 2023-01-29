@@ -18,7 +18,11 @@
     "type": "git",
     "url": "git+https://github.com/dostonnabotov/11ty-one-page-template.git"
   },
-  "keywords": ["eleventy", "11ty", "template"],
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "template"
+  ],
   "author": "Doston Nabotov",
   "license": "ISC",
   "bugs": {
